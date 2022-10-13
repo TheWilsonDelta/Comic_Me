@@ -1,0 +1,34 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "favicon/apple-touch-icon.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "favicon/site.webmanifest" %}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    {% block title %}<title>Training Storyboard</title>{% endblock %}
+</head>
+<body>
+<br>
+<img alt="Logo" style="display: block; margin-left: auto; margin-right: auto;" height="50"
+     src="{% static "images/Novo.png" %}">
+<a style="color: black ;font-size: 33px; position: relative">
+    <center>Training Storyboard App</center>
+</a>
+<br>
+<main class="form">
+    <div class="container">
+        <div class="row justify-content-center col justify-content-center">
+            <div class="col-md-5">
+                <div class="card">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'registation_base.html' %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+    <div class="card-header" style="background: #2196F3; color: white"><b>User Login</b></div>
+    <div class="card-body">
+        <form method="post" class="from-group">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <p>Forgot your password? Reset it <a href="/password_reset">here</a></p>
+            <button type="submit" style="background: #2196F3; color: white" class="btn btn-success">
+                Login
+            </button>
+        </form>
+    </div>
+{% endblock %}

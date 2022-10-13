@@ -1,0 +1,59 @@
+{% extends 'main_module/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container space-2 space-top-2 text-left">
+        <h6><b>How do I create my first storyboard?</b></h6>
+        <ol>
+            <li><h6>Once logged in, navigate to the <b>CREATE</b> page. This will open the Create your own storyboard
+                canvas.
+            </h6></li>
+            <br>
+            <img src="{% static "images/nn-home.png" %}" height="400" width="800" alt="nn-home"
+                 style="border: 1px solid #bfbfbf">
+            <br>
+            <br>
+            <li><h6>From here, click on the <b>LOAD</b> button to upload an image (from your local computer) to be used
+                as
+                the storyboard scene.</h6></li>
+            <br>
+            <img src="{% static "images/nn-create.png" %}" height="400" width="800" alt="nn-create"
+                 style="border: 1px solid #bfbfbf">
+            <br>
+            <br>
+            <li><h6>Next, utilize the right-side controls to add text to your storyboard. Once the <b>TEXT</b> control
+                has
+                been
+                selected, you can add text to the scene by simply double-clicking on the area of the storyboard
+                where you would like to add the text. Next, set the font size and font color using the text controls
+                situated on the right-side of the canvas. Look out for even more fun elements to add to your
+                storyboard, for example the ability to add icons and shapes to your scene.</h6></li>
+            <li><h6>Almost there! Enter your storyboard name (maximum of 40 characters allowed), specify the
+                storyboard
+                target audience by selecting a language and category using the left-side control panel.</h6></li>
+            <li><h6>Now you would be able to download your created storyboard using the <b>DOWNLOAD</b> button (top
+                right of
+                the screen). Alternatively, click on the <b>SAVE TO SERVER</b> button to save the storyboard to the Novo
+                Nordisk cloud-based library.</h6></li>
+        </ol>
+        <br>
+        <h6><b>How do I access my saved storyboards?</b></h6>
+        <ol>
+            <li><h6>From the Home screen, click on the <b>LIBRARY</b> left-side menu item. This will open the
+                cloud-based
+                storyboard library.</h6></li>
+            <br>
+            <img src="{% static "images/nn-library.png" %}" height="400" width="800" alt="nn-library"
+                 style="border: 1px solid #bfbfbf">
+            <br>
+            <br>
+            <li><h6>From the library you can download a saved storyboard (click on the related <b>DOWNLOAD</b>
+                link)
+                and/or
+                copy the related storyboard URL (click on the related <b>COPY URL</b> link). This storyboard URL can
+                then be used in your surveys app for creating training quizzes.</h6></li>
+            <br>
+            <br>
+        </ol>
+    </div>
+{% endblock %}

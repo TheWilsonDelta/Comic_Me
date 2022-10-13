@@ -1,0 +1,93 @@
+{% extends "admin/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "favicon/apple-touch-icon.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "favicon/site.webmanifest" %}">
+
+    {% block title %}Training Storyboard (Admin){% endblock %}
+    {% block branding %}
+
+        <style>
+            .topnav {
+                background-color: transparent;
+                overflow: hidden;
+            }
+
+            :root {
+                --primary-color: #bfbfbf;
+                --primary-color-faded: #585853;
+                --secondary-color: #4dffba;
+            }
+
+            ::selection {
+                background: var(--secondary-color);
+                color: var(--primary-color);
+                opacity: 1
+            }
+
+            ::-moz-selection {
+                background: var(--secondary-color);
+                color: var(--primary-color);
+                opacity: 1
+            }
+
+            #header {
+                background: var(--primary-color);
+            }
+
+            .module h2, .module caption, .inline-group h2 {
+                background-color: var(--primary-color);
+            }
+
+            div.breadcrumbs {
+                background: var(--primary-color-faded);
+            }
+
+            a:link, a:visited {
+                color: var(--primary-color-faded);
+            }
+
+            .selector-chosen h2 {
+                background: var(--primary-color-faded) !important;
+            }
+
+            .button, input[type=submit], input[type=button], .submit-row input, a.button {
+                background: var(--primary-color-faded);
+            }
+
+            .button.default, input[type=submit].default, .submit-row input.default {
+                background: var(--primary-color);
+            }
+
+            .button:active, input[type=submit]:active, input[type=button]:active, .button:focus, input[type=submit]:focus, input[type=button]:focus, .button:hover, input[type=submit]:hover, input[type=button]:hover {
+                background: var(--primary-color-faded);
+                opacity: 0.8;
+            }
+
+            .button.default:active, input[type=submit].default:active, .button.default:focus, input[type=submit].default:focus, .button.default:hover, input[type=submit].default:hover {
+                background: var(--primary-color);
+                opacity: 0.8;
+            }
+
+            #content-related {
+                display: none;
+                visibility: hidden;
+            }
+
+        </style>
+        </head>
+        <body>
+        <div class="topnav">
+            <a style="pointer-events: none">
+                <img height="18" src="/static/images/Novo.png">
+                <span style=" color:white; font-size:24px;">Training Storyboard Administration</span>
+            </a>
+        </div>
+        <script>
+        </script>
+        </body>
+    {% endblock %}

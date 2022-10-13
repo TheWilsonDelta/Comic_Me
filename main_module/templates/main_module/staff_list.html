@@ -1,0 +1,46 @@
+{% extends 'main_module/base.html' %}
+
+{% block content %}
+    {% for tiles in image %}
+        <div class="grid-container">
+            <div class="grid-item">
+                <b><u>{{ tiles.name }}</u></b>
+                <p style="margin-bottom: 0">{{ tiles.user }} ({{ tiles.language }})</p>
+                <p style="margin-bottom: 0">Category: {{ tiles.category }}</p>
+                <a href="{% url 'home' %}media/{{ tiles.main_image }}" target="_blank">
+                    <img src="{% url 'home' %}media/{{ tiles.main_image }}" height="200" width="300"
+                         alt="{{ tiles.name }}"></a>
+                <p style="margin-bottom: 0">{{ tiles.uploaded_at }}</p>
+                <a href="{% url 'home' %}media/{{ tiles.main_image }}" download>Download</a>
+                <a href="#"
+                   onclick="copyTextToClipboard('https://novo-storyboards.com/media/{{ tiles.main_image }}'); return false;">Copy
+                    URL</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block extrascript %}
+    <script>
+        function fallbackCopyTextToClipboard(text) {
+            var textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";  //avoid scrolling to bottom
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            var successful = document.execCommand('copy');
+            document.body.removeChild(textArea);
+        }
+
+        function copyTextToClipboard(text) {
+            if (!navigator.clipboard) {
+                fallbackCopyTextToClipboard(text);
+                return;
+            }
+            navigator.clipboard.writeText(text).then(function () {
+            }, function (err) {
+            });
+        }
+    </script>
+{% endblock %}

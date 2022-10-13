@@ -1,0 +1,13 @@
+{% extends 'registation_base.html' %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+    <div class="card-header" style="background: #2196F3; color: white"><b>Successfully logged out</b></div>
+    <div class="card-body">
+        <form method="post" class="from-group">
+            {{ form|crispy }}
+            <p>You have successfully been logged out.</p>
+            <p><a href="/login">Log back in</a></p>
+        </form>
+    </div>
+{% endblock %}

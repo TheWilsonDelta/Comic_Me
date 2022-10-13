@@ -1,0 +1,5 @@
+mod_wsgi
+Django==3.0.*
+mysqlclient
+django-crispy-forms
+Pillow
